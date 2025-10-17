@@ -290,6 +290,12 @@ class App {
       this.#renderWorkout(work);
     });
   }
+
+  // Reset app API (clear local storage and workouts)
+  reset() {
+    localStorage.removeItem('workouts');
+    location.reload();
+  }
 }
 
 const app = new App();
